@@ -1,0 +1,142 @@
+media:
+  input: assets/img
+  output: assets/img
+
+content:
+  - name: personal-profile
+    label: 个人网站资料
+    type: file
+    path: data/profile.json
+    format: json
+    fields:
+      - name: profile
+        label: 首页个人资料
+        type: object
+        fields:
+          - name: displayName
+            label: 姓名 / 展示名称
+            type: string
+            required: true
+          - name: tagline
+            label: 职业标签
+            type: string
+            required: true
+            description: 显示在姓名下方，建议用“ | ”分隔关键词。
+          - name: avatar
+            label: 头像
+            type: image
+            required: true
+          - name: birth
+            label: 出生年月
+            type: string
+            description: 例如 1995.04。
+          - name: location
+            label: 居住地址
+            type: string
+          - name: summary
+            label: 职业定位介绍
+            type: text
+            list:
+              min: 1
+            required: true
+            description: 每一项会显示为一个独立段落。
+      - name: contact
+        label: 联系方式
+        type: object
+        fields:
+          - name: email
+            label: 邮箱
+            type: string
+            required: true
+          - name: phoneWechat
+            label: 电话 / 微信（显示文字）
+            type: string
+            required: true
+          - name: phoneDial
+            label: 电话拨号值
+            type: string
+            required: true
+            description: 仅使用数字和国家区号，例如 +8618710121420。
+          - name: githubLabel
+            label: GitHub 显示名称
+            type: string
+          - name: githubUrl
+            label: GitHub 主页链接
+            type: string
+          - name: linkedinUrl
+            label: LinkedIn 主页链接
+            type: string
+          - name: mapEmbedUrl
+            label: 联系页地图嵌入链接
+            type: text
+            description: 高德地图或其他地图提供的 HTTPS 嵌入链接。
+      - name: education
+        label: 学历信息
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: 学校 · 专业（学历）
+            type: string
+            required: true
+          - name: period
+            label: 时间
+            type: string
+            required: true
+          - name: description
+            label: 学习内容 / 说明
+            type: text
+            required: true
+      - name: experience
+        label: 职业履历
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: 公司 · 职位
+            type: string
+            required: true
+          - name: period
+            label: 任职时间
+            type: string
+            required: true
+          - name: description
+            label: 工作内容
+            type: text
+            required: true
+      - name: skills
+        label: 专业技能
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: 技能名称
+            type: string
+            required: true
+          - name: description
+            label: 技能说明
+            type: text
+            required: true
+      - name: skillFocus
+        label: 持续提升方向
+        type: text
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      update: "内容更新：{path}（Pages CMS）"

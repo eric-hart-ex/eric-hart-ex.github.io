@@ -1,0 +1,78 @@
+{
+  "profile": {
+    "displayName": "Eric Hart | 侯尧",
+    "tagline": "B2B数字营销 | 陶瓷卫浴行业 | SEO与AI驱动内容 | 社媒运营",
+    "avatar": "assets/img/main-photo.svg",
+    "birth": "1995.04",
+    "location": "北京 昌平",
+    "summary": [
+      "专注B2B制造业数字营销与外贸运营，拥有企业官网维护、SEO内容优化、海外社媒、视频制作和品牌宣传经验。工作经历覆盖陶瓷卫浴、制造业出海、TikTok达人营销及教育行业新媒体运营。",
+      "结合计算机专业基础与内容运营经验，持续实践Google Search Console数据分析、网站索引与SEO问题排查，并使用ChatGPT、Codex等AI工具辅助内容规划、资料分析和工作流程优化。"
+    ]
+  },
+  "contact": {
+    "email": "eric.hart.ex@gmail.com",
+    "phoneWechat": "+86 18710121420",
+    "phoneDial": "+8618710121420",
+    "githubLabel": "eric-hart-ex",
+    "githubUrl": "https://github.com/eric-hart-ex",
+    "linkedinUrl": "https://www.linkedin.com/in/eric-hart-3ba910378/",
+    "mapEmbedUrl": "https://www.amap.com/ssr/embed/search?keyword=%E5%A4%A9%E9%80%9A%E8%8B%91&lng=116.405285&lat=39.904989&city=110000&geoobj=116.144188%7C39.757741%7C116.776245%7C40.059805&zoom=12&source=search&platform=pc"
+  },
+  "education": [
+    {
+      "title": "河南理工大学万方科技学院 · 计算机科学与技术（本科）",
+      "period": "2015.09 — 2019.06",
+      "description": "学习网页制作、HTML、JavaScript、计算机网络及数据库基础；接触UI设计、Photoshop、Illustrator、Premiere与After Effects等内容创作工具。"
+    }
+  ],
+  "experience": [
+    {
+      "title": "北京森兰特科技有限公司 · 外贸运营",
+      "period": "2025.08 — 至今",
+      "description": "负责企业数字化宣传与品牌内容运营，承担5个企业官网内容维护及SEO优化，编辑企业新闻、技术文章与行业内容；独立策划剪辑宣传视频，制作展会物料、企业画册及宣传资料。在工作中使用Google Search Console分析搜索表现与收录问题，并探索AI辅助内容及网站优化流程。"
+    },
+    {
+      "title": "北京巴克出海科技有限公司 · 跨境运营",
+      "period": "2024.08 — 2025.08",
+      "description": "参与餐车类产品海外推广、Shopify网站建设及产品维护，包括产品图片制作、上下架、页面迭代和SEO基础优化。配合海外社媒内容运营、视频制作及B端产品出海宣传。"
+    },
+    {
+      "title": "北京佰特鱼科技有限公司 · 运营专员",
+      "period": "2023.10 — 2024.08",
+      "description": "负责TikTok海外KOL达人开发与合作流程，包括商务沟通、样品寄送及素材回收；参与视频内容策划、剪辑和投放素材优化，关注点击率与转化率等运营指标。"
+    },
+    {
+      "title": "天津聚友驾培有限公司 · 招生、教学及新媒体运营",
+      "period": "2020.04 — 2023.10",
+      "description": "参与招生咨询、报名、体检、教学、考试辅导及学员服务全流程；运营抖音、快手、小红书，结合科目二、科目三教学场景制作短视频内容，探索线上获客与招生引流。"
+    }
+  ],
+  "skills": [
+    {
+      "title": "企业网站与Google SEO",
+      "description": "企业官网维护、内容更新、Google Search Console、索引排查、站点地图、页面SEO诊断及Shopify内容运营。"
+    },
+    {
+      "title": "B2B内容营销与品牌传播",
+      "description": "制造业产品推广、行业技术文章、企业新闻、展会物料、品牌画册及海外市场宣传内容。"
+    },
+    {
+      "title": "国内外社交媒体运营",
+      "description": "TikTok达人开发、KOL商务合作、视频素材管理，抖音、快手、小红书内容创作与运营。"
+    },
+    {
+      "title": "视觉设计与视频制作",
+      "description": "Photoshop、Illustrator、Premiere、After Effects、剪映及Audition；具备网页UI设计基础。"
+    },
+    {
+      "title": "AI辅助内容与运营流程",
+      "description": "ChatGPT、Codex、ComfyUI，已实践AI辅助内容生产、网站代码修改、SEO问题整理与流程优化；复杂自动化仍在持续学习。"
+    },
+    {
+      "title": "网页与数字化工具",
+      "description": "计算机科学与技术专业背景，HTML、CSS、JavaScript基础，Github Pages部署与静态网页维护。"
+    }
+  ],
+  "skillFocus": "持续提升方向：技术SEO、GA4与网站转化分析、AI自动化应用。"
+}
