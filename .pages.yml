@@ -203,6 +203,7 @@ content:
       - name: body
         label: 正文 · 富文本编辑器（可插入图片、标题、链接、列表、加粗等）
         type: rich-text
+        description: 想用传统Word式工具栏，可打开 https://eric-hart-ex.github.io/article-editor.html 编辑，然后复制HTML粘贴到本字段的Source模式，最后在本页保存。
         required: true
         options:
           format: html
