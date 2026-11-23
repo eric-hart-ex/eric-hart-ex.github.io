@@ -1,0 +1,43 @@
+/* Styles only for content managed through existing Pages CMS. */
+.cms-empty { padding: 32px 0; color: #737780; font-size: 15px; }
+.cms-meta { color: #818893; font-size: 13px; margin: 6px 0 12px; }
+.news-item__caption a { color: inherit; text-decoration: none; }
+.news-item__caption a:hover, .cms-more:hover, .cms-back a:hover { color: #287ddd; }
+.cms-image-fallback { min-height: 190px; background: linear-gradient(130deg, #eef3f8, #d6e1ed); }
+.cms-image-fallback .news-item__link { z-index: 2; }
+.cms-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 26px; }
+.cms-filter-button { cursor: pointer; color: #3a4756; background: #f0f2f5; border: 1px solid transparent; padding: 9px 15px; border-radius: 18px; font: inherit; font-size: 13px; }
+.cms-filter-button.active, .cms-filter-button:hover { color: #fff; background: #304d6d; }
+.cms-filter-button:focus-visible { outline: 2px solid #2d80d7; outline-offset: 2px; }
+.cms-project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.cms-project-card { min-width: 0; background: #f8f9fb; border-radius: 14px; padding: 20px; overflow-wrap: anywhere; }
+.cms-project-card .title { margin-top: 14px; margin-bottom: 6px; }
+.cms-project-card p { margin-bottom: 12px; }
+.cms-project-image { display: block; width: 100%; max-height: 270px; object-fit: cover; border-radius: 10px; }
+.cms-project-body { font-size: 14px; line-height: 1.8; }
+.cms-more, .cms-back a { color: #287ddd; }
+.cms-intro { font-size: 17px; color: #666c77; margin: 18px 0 24px; }
+.cms-post-cover { width: 100%; display: block; max-height: 460px; object-fit: cover; border-radius: 12px; margin: 22px 0; }
+.cms-rich { line-height: 1.85; overflow-wrap: anywhere; margin: 20px 0 28px; }
+.cms-rich p { margin: 0 0 1.25em; }
+.cms-rich h2, .cms-rich h3, .cms-rich h4, .cms-rich h5 { margin: 1.6em 0 .65em; line-height: 1.35; }
+.cms-rich h2 { font-size: 1.6em; }
+.cms-rich h3 { font-size: 1.35em; }
+.cms-rich h4 { font-size: 1.17em; }
+.cms-rich img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 1em auto; }
+.cms-rich a { color: #237bd5; text-decoration: underline; }
+.cms-rich ul, .cms-rich ol { padding-left: 1.6em; margin: 1em 0; }
+.cms-rich li { margin: .25em 0; }
+.cms-rich blockquote { padding: 12px 16px; margin: 1.5em 0; border-left: 4px solid #408bd2; background: #f3f7fb; }
+.cms-rich pre { overflow-x: auto; background: #172333; color: #eef5fa; padding: 16px; border-radius: 8px; }
+.cms-rich code { font-family: Consolas, Monaco, monospace; }
+.cms-rich table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1.2em 0; max-width: 100%; }
+.cms-rich td, .cms-rich th { border: 1px solid #d8dde5; padding: 8px 12px; }
+.cms-rich figure { margin: 1.3em 0; }
+.cms-rich figcaption { text-align: center; color: #777; font-size: .87em; }
+.cms-back { border-top: 1px solid #e5e8ed; padding-top: 24px; }
+@media (max-width: 767px) {
+  .cms-project-grid { grid-template-columns: 1fr; gap: 16px; }
+  .cms-project-card { padding: 16px; }
+  .cms-filter-button { padding: 7px 11px; }
+}
