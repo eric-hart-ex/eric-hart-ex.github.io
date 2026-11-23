@@ -1,6 +1,15 @@
 media:
-  input: assets/img
-  output: assets/img
+  - name: images
+    label: 图片素材
+    input: assets/img
+    output: /assets/img
+    categories: [image]
+  - name: videos
+    label: 视频素材（建议5–10秒）
+    input: assets/video
+    output: /assets/video
+    categories: [video]
+    extensions: [mp4, webm]
 
 content:
   - name: personal-profile
@@ -170,6 +179,8 @@ content:
       - name: cover
         label: 封面静态图片（图片模式或视频预览图）
         type: image
+        options:
+          media: images
       - name: coverType
         label: 封面展示方式
         type: select
@@ -184,9 +195,7 @@ content:
         label: 封面短视频（MP4/WebM，建议5–10秒、无声）
         type: file
         options:
-          categories: [video]
-          extensions: [mp4, webm]
-          path: assets/video
+          media: videos
           rename: safe
       - name: excerpt
         label: 摘要（列表展示）
@@ -198,7 +207,7 @@ content:
         options:
           format: html
           switcher: true
-          path: assets/img
+          media: images
           rename: safe
       - name: font
         label: 正文字体（整篇）
@@ -273,6 +282,8 @@ content:
       - name: cover
         label: 作品封面静态图片（图片模式或视频预览图）
         type: image
+        options:
+          media: images
       - name: coverType
         label: 封面展示方式
         type: select
@@ -287,9 +298,7 @@ content:
         label: 封面短视频（MP4/WebM，建议5–10秒、无声）
         type: file
         options:
-          categories: [video]
-          extensions: [mp4, webm]
-          path: assets/video
+          media: videos
           rename: safe
       - name: description
         label: 项目背景 / 负责内容
@@ -300,7 +309,7 @@ content:
         options:
           format: html
           switcher: true
-          path: assets/img
+          media: images
           rename: safe
       - name: link
         label: 项目相关链接（选填）
