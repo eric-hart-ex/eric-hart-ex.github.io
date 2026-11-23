@@ -133,6 +133,143 @@ content:
         label: 持续提升方向
         type: text
 
+  - name: blog-posts
+    label: 技术博客 · 文章管理
+    type: file
+    path: data/posts.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: slug
+        label: 唯一文章标识（英文小写和连字符，发布后不要修改）
+        type: string
+        required: true
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        description: 例如 google-seo-index。决定文章链接 ?id=google-seo-index，不可与其他文章重复。
+      - name: title
+        label: 文章标题
+        type: string
+        required: true
+      - name: published
+        label: 公开发布（关闭则不在网站显示）
+        type: boolean
+        default: false
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: 文章分类
+        type: select
+        options:
+          values: [Google SEO, AI与自动化, B2B数字营销, 网站运营, 设计与视频, 工作思考, 其他]
+      - name: cover
+        label: 文章封面
+        type: image
+      - name: excerpt
+        label: 摘要（列表展示）
+        type: text
+      - name: body
+        label: 正文 · 富文本编辑器（可插入图片、标题、链接、列表、加粗等）
+        type: rich-text
+        required: true
+        options:
+          format: html
+          switcher: true
+          path: assets/img
+          rename: safe
+      - name: font
+        label: 正文字体（整篇）
+        type: select
+        options:
+          values:
+            - name: system
+              label: 网站默认字体
+            - name: serif
+              label: 宋体 / 衬线
+            - name: sans
+              label: 黑体 / 无衬线
+      - name: fontSize
+        label: 正文字号（整篇）
+        type: select
+        options:
+          values:
+            - name: "14"
+              label: 14px
+            - name: "16"
+              label: 16px
+            - name: "18"
+              label: 18px
+            - name: "20"
+              label: 20px
+      - name: align
+        label: 正文对齐（整篇）
+        type: select
+        options:
+          values:
+            - name: left
+              label: 左对齐
+            - name: center
+              label: 居中
+            - name: right
+              label: 右对齐
+            - name: justify
+              label: 两端对齐
+      - name: seoTitle
+        label: SEO标题（可选）
+        type: string
+      - name: seoDescription
+        label: SEO描述（可选）
+        type: text
+  - name: project-portfolio
+    label: 项目作品 · 作品管理
+    type: file
+    path: data/projects.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: slug
+        label: 唯一作品标识
+        type: string
+        required: true
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      - name: title
+        label: 作品标题
+        type: string
+        required: true
+      - name: published
+        label: 公开展示
+        type: boolean
+        default: false
+      - name: category
+        label: 作品分类
+        type: select
+        options:
+          values: [SEO与网站运营, AI与自动化, 平面设计, 视频制作, 社媒运营, 跨境营销, 其他]
+      - name: cover
+        label: 作品封面
+        type: image
+      - name: description
+        label: 项目背景 / 负责内容
+        type: text
+      - name: body
+        label: 详细介绍（富文本）
+        type: rich-text
+        options:
+          format: html
+          switcher: true
+          path: assets/img
+          rename: safe
+      - name: link
+        label: 项目相关链接（选填）
+        type: string
+
 settings:
   content:
     merge: true
