@@ -41,3 +41,15 @@
   .cms-project-card { padding: 16px; }
   .cms-filter-button { padding: 7px 11px; }
 }
+
+/* Optional 5–10 second video covers; image fallback remains visible until playback succeeds. */
+.cms-video-container { position: relative; display: block; width: 100%; overflow: hidden; border-radius: inherit; background: #101622; }
+.cms-video-container > .cms-video-poster, .cms-video-container > .cms-video-cover { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cms-video-container > .cms-video-cover { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 220ms ease; }
+.cms-video-container.cms-video-playing > .cms-video-cover { opacity: 1; }
+.cms-video-container.cms-video-failed > .cms-video-cover { display: none; }
+.news-item__image-wrap .cms-video-container { height: 100%; min-height: 190px; }
+.cms-project-grid .cms-video-container { aspect-ratio: 16/9; border-radius: 10px; }
+[data-cms-post] .cms-video-container { aspect-ratio: 16/9; border-radius: 12px; margin: 22px 0; }
+[data-cms-post] .cms-video-container > .cms-post-cover { margin: 0; height: 100%; max-height: none; }
+@media (prefers-reduced-motion: reduce) { .cms-video-cover { display: none !important; } .cms-video-container > .cms-video-poster { visibility: visible; } }
