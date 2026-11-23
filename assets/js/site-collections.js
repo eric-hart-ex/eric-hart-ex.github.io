@@ -47,7 +47,7 @@
   function coverMedia(item, css) {
     var still = image(item.cover, item.title, css || "cover");
     var videoUrl = item.coverType === "video" ? url(item.coverVideo) : "";
-    if (!videoUrl || !/\\.(mp4|webm)(?:[?#]|$)/i.test(videoUrl)) return still;
+    if (!videoUrl || !/\.(mp4|webm)(?:[?#]|$)/i.test(videoUrl)) return still;
     var wrap = el("span", "cms-video-container");
     if (still) {
       still.classList.add("cms-video-poster");
