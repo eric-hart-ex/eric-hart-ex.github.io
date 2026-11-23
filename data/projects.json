@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "slug": "test01",
+    "title": "测试作品标题",
+    "published": true,
+    "category": "AI与自动化",
+    "cover": "assets/img/豆包 (1).png",
+    "description": "测试AI辅助工作内容制作",
+    "body": "<p></p>"
+  }
+]
