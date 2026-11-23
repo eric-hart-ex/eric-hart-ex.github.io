@@ -20,7 +20,7 @@ function allowedHtml(raw){
    if(n.style){
     var align=n.style.textAlign, color=n.style.color, size=n.style.fontSize, family=n.style.fontFamily;
     if(["left","center","right","justify"].includes(align))el.style.textAlign=align;
-    if(/^(#[0-9a-f]{3,8}|rgb\\(\\s*\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+\\s*\\))$/i.test(color))el.style.color=color;
+    if(/^(#[0-9a-f]{3,8}|rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\))$/i.test(color))el.style.color=color;
     if(/^(1[2-9]|2[0-8])px$/.test(size))el.style.fontSize=size;
     if(/^(Arial|Georgia|SimSun|Microsoft YaHei|Times New Roman)(,.*)?$/i.test(family.replace(/["']/g,"")))el.style.fontFamily=family;
    }
