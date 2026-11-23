@@ -44,6 +44,52 @@
     n.loading = "lazy";
     return n;
   }
+  function coverMedia(item, css) {
+    var still = image(item.cover, item.title, css || "cover");
+    var videoUrl = item.coverType === "video" ? url(item.coverVideo) : "";
+    if (!videoUrl || !/\.(mp4|webm)(?:[?#]|$)/i.test(videoUrl)) return still;
+    var wrap = el("span", "cms-video-container");
+    if (still) {
+      still.classList.add("cms-video-poster");
+      wrap.appendChild(still);
+    }
+    var v = el("video", (css || "cover") + " cms-video-cover");
+    v.muted = true;
+    v.defaultMuted = true;
+    v.loop = true;
+    v.playsInline = true;
+    v.preload = "metadata";
+    v.autoplay = false;
+    v.setAttribute("muted", "");
+    v.setAttribute("playsinline", "");
+    v.setAttribute("aria-label", (item.title || "封面") + "短视频");
+    if (still) v.poster = still.src;
+    v.src = videoUrl;
+    var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var stop = function () { v.pause(); };
+    v.addEventListener("error", function () { wrap.classList.add("cms-video-failed"); stop(); });
+    v.addEventListener("loadedmetadata", function () {
+      if (Number.isFinite(v.duration) && (v.duration < 5 || v.duration > 10)) {
+        console.info("建议把封面视频剪辑至5–10秒：", item.title || item.slug);
+      }
+    });
+    v.addEventListener("playing", function () { wrap.classList.add("cms-video-playing"); });
+    v.addEventListener("pause", function () { wrap.classList.remove("cms-video-playing"); });
+    if (!reduced) {
+      v.setAttribute("autoplay", "");
+      var play = function () { v.play().catch(function () { /* fallback to poster */ }); };
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) { if (entry.isIntersecting) play(); else stop(); });
+        }, { threshold: 0.3 });
+        io.observe(v);
+      } else {
+        play();
+      }
+    }
+    wrap.appendChild(v);
+    return wrap;
+  }
   function setMeta(kind, key, value) {
     var selector = "meta[" + kind + "=\"" + key + "\"]";
     var n = document.querySelector(selector);
@@ -91,6 +137,8 @@
           var color = node.style.color, size = node.style.fontSize;
           if (/^(#[0-9a-f]{3,8}|rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\))$/i.test(color)) next.style.color = color;
           if (/^(1[2-9]|2[0-8])px$/.test(size)) next.style.fontSize = size;
+          var family = node.style.fontFamily.replace(/["\x27]/g, "").trim();
+          if (/^(Arial|Georgia|SimSun|Microsoft YaHei|Times New Roman)$/i.test(family)) next.style.fontFamily = family;
         }
       }
       Array.prototype.forEach.call(node.childNodes, function (child) { next.appendChild(copy(child)); });
@@ -116,7 +164,7 @@
         anchor.href = "single-post.html?id=" + encodeURIComponent(post.slug);
         anchor.setAttribute("aria-label", post.title || "阅读文章");
         wrapper.appendChild(anchor);
-        var cover = image(post.cover, post.title, "cover");
+        var cover = coverMedia(post, "cover");
         if (cover) wrapper.appendChild(cover);
         else wrapper.classList.add("cms-image-fallback");
         card.appendChild(wrapper);
@@ -145,7 +193,7 @@
         root.replaceChildren();
         items.filter(function (v) { return category === "全部" || (v.category || "其他") === category; }).forEach(function (project) {
           var card = el("article", "cms-project-card");
-          var cover = image(project.cover, project.title, "cms-project-image");
+          var cover = coverMedia(project, "cms-project-image");
           if (cover) card.appendChild(cover);
           var title = el("h3", "title title--h4", project.title || "未命名作品");
           card.appendChild(title);
@@ -197,7 +245,7 @@
       root.appendChild(el("h1", "title title--h1", post.title || "未命名文章"));
       root.appendChild(el("p", "cms-meta", [dateText(post.date), post.category].filter(Boolean).join(" · ")));
       if (post.excerpt) root.appendChild(el("p", "cms-intro", post.excerpt));
-      var cover = image(post.cover, post.title, "cms-post-cover");
+      var cover = coverMedia(post, "cms-post-cover");
       if (cover) root.appendChild(cover);
       var body = el("div", "cms-rich");
       var size = ["14", "16", "18", "20"].indexOf(String(post.fontSize)) >= 0 ? post.fontSize : "16";
