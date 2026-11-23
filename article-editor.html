@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>文章工具栏编辑器 · Eric Hart CMS</title>
+<link rel="stylesheet" href="assets/styles/article-editor.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="symbol">EH</span><div><strong>Eric Hart CMS</strong><small>传统富文本文章编辑器 · 兼容原有 Pages CMS</small></div></div>
+<nav><a href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">打开 Pages CMS</a><a href="blog.html">返回技术博客</a></nav></header>
+<main class="workspace">
+<div class="intro"><div><h1>撰写技术文章</h1><p>传统工具栏直接排版，正文可粘贴到 Pages CMS 的「Source」模式。无需另建仓库或GitHub授权服务。</p></div><span class="status" id="savedStatus">本地草稿</span></div>
+<div class="notice"><strong>保存说明：</strong>此编辑页不会直接提交GitHub。使用「复制正文HTML」，到 Pages CMS → 技术博客 · 文章管理 → 正文 → Source 粘贴，填写其他字段并点击CMS保存。也可下载JSON条目做备份。请勿把机密信息保存到公开仓库。</div>
+<section class="panel">
+<h2>文章基本信息</h2>
+<div class="formgrid">
+<label>文章标题 <input id="articleTitle" placeholder="例如：Google SEO：如何排查网页索引问题"></label>
+<label>唯一文章标识（英文）<input id="slug" pattern="[a-z0-9-]+" placeholder="google-seo-index"></label>
+<label>文章分类<select id="category"><option>Google SEO</option><option>AI与自动化</option><option>B2B数字营销</option><option>网站运营</option><option>设计与视频</option><option>工作思考</option><option>其他</option></select></label>
+<label>发布日期<input type="date" id="date"></label>
+<label>SEO标题<input id="seoTitle" placeholder="可与文章标题不同"></label>
+<label>封面图片路径<input id="cover" placeholder="/assets/img/cover.webp"></label>
+<label>封面类型<select id="coverType"><option value="image">图片</option><option value="video">短视频（5–10秒）</option></select></label>
+<label>封面视频路径<input id="coverVideo" placeholder="/assets/video/cover.mp4"></label>
+<label class="wide">摘要<textarea id="excerpt" rows="2" placeholder="用于博客列表与搜索摘要"></textarea></label>
+</div>
+</section>
+<section class="panel">
+<div class="editor-header"><h2>文章正文</h2><div class="mode"><button id="visualMode" class="selected" type="button">可视化</button><button id="sourceMode" type="button">HTML源码</button></div></div>
+<div id="toolbar" class="toolbar" role="toolbar" aria-label="文字排版工具栏">
+<label title="段落和标题"><select id="format"><option value="p">正文段落</option><option value="h2">二级标题</option><option value="h3">三级标题</option><option value="h4">四级标题</option><option value="blockquote">引用</option></select></label>
+<label title="字体"><select id="font"><option value="Arial">Arial</option><option value="Microsoft YaHei">微软雅黑</option><option value="SimSun">宋体</option><option value="Georgia">Georgia</option><option value="Times New Roman">Times New Roman</option></select></label>
+<label title="字号"><select id="fontSize"><option value="14">14px</option><option value="16" selected>16px</option><option value="18">18px</option><option value="20">20px</option><option value="24">24px</option></select></label>
+<button type="button" data-cmd="bold" title="加粗"><b>B</b></button><button type="button" data-cmd="italic" title="斜体"><i>I</i></button><button type="button" data-cmd="underline" title="下划线"><u>U</u></button>
+<label title="字体颜色" class="color">颜色<input id="color" type="color" value="#202734"></label>
+<button type="button" data-cmd="insertUnorderedList" title="无序列表">☷</button><button type="button" data-cmd="insertOrderedList" title="编号列表">①</button>
+<button type="button" data-cmd="justifyLeft" title="左对齐">≡</button><button type="button" data-cmd="justifyCenter" title="居中">☰</button><button type="button" data-cmd="justifyRight" title="右对齐">≣</button><button type="button" data-cmd="justifyFull" title="两端对齐">▤</button>
+<button type="button" id="insertLink" title="插入超链接">🔗</button><button type="button" id="insertImage" title="插入图片路径">▧</button><button type="button" id="insertTable" title="插入表格">▦</button>
+<button type="button" data-cmd="undo" title="撤销">↶</button><button type="button" data-cmd="redo" title="重做">↷</button><button type="button" data-cmd="removeFormat" title="清除样式">Tx</button>
+</div>
+<div id="editor" class="page-content" contenteditable="true" spellcheck="true" aria-label="文章正文"><h2>请输入文章的小标题</h2><p>在这里开始写文章。选中文字即可使用上方的格式工具，像Word一样排版。</p></div>
+<textarea id="source" class="source" spellcheck="false" aria-label="文章HTML源码" hidden></textarea>
+<div class="editor-foot"><span id="stats">0 字</span><span>本地自动暂存，不等于已发布</span></div>
+</section>
+<div class="actions">
+<button id="copy" class="primary" type="button">复制正文HTML</button>
+<button id="download" type="button">下载文章JSON备份</button>
+<label class="import">导入JSON文件<input id="importFile" type="file" accept=".json,application/json" hidden></label>
+<button id="clear" class="danger" type="button">清空本地草稿</button>
+</div>
+<div class="notice bottom"><strong>图片与5–10秒视频：</strong>先通过 Pages CMS 上传素材，再将获得的路径填入封面字段；正文图片也使用已上传的图片URL。文章与项目封面可二选一，视频自动静音循环，并在关闭动态效果时退回封面图。</div>
+</main>
+<script src="assets/js/article-editor.js"></script>
+</body>
+</html>
