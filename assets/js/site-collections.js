@@ -137,6 +137,8 @@
           var color = node.style.color, size = node.style.fontSize;
           if (/^(#[0-9a-f]{3,8}|rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\))$/i.test(color)) next.style.color = color;
           if (/^(1[2-9]|2[0-8])px$/.test(size)) next.style.fontSize = size;
+          var family = node.style.fontFamily.replace(/["\x27]/g, "").trim();
+          if (/^(Arial|Georgia|SimSun|Microsoft YaHei|Times New Roman)$/i.test(family)) next.style.fontFamily = family;
         }
       }
       Array.prototype.forEach.call(node.childNodes, function (child) { next.appendChild(copy(child)); });
