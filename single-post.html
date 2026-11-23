@@ -38,9 +38,10 @@
     <!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css"/>
     <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/styles/cms-content.css"/>
 	
 </head>
-<body>
+<body data-cms-page="post">
     <!-- Preloader -->
     <div class="preloader">
 	    <div class="preloader__wrap">
@@ -94,148 +95,10 @@
 				<!-- Content -->
 		        <div class="col-12 col-md-12 col-lg-10">
 				    <div class="box box-content">
-						<!-- Post -->
-						<div class="pb-3">
-						    <header class="header-post">
-                                <h1 class="title title--h1">【待填写：文章标题一】</h1>
-								<div class="caption-post">
-								    <p>【待补充：文章导语】</p>
-								</div>
-								<div class="header-post__image-wrap">
-								    <img class="cover lazyload" src="assets/img/image_header.jpg" data-zoom alt="【待上传：文章头图】" />
-								</div>
-							</header>
-							<div class="caption-post">
-								<p>【待补充：文章正文段落】</p>
-								<p>【待补充：文章正文段落】</p>
-						    </div>
-							<div class="gallery-post">
-							    <img class="gallery-post__item cover lazyload" src="assets/img/image_10.jpg" data-zoom alt="【待上传：文章配图】" />
-								<img class="gallery-post__item cover lazyload" src="assets/img/image_11.jpg" data-zoom alt="【待上传：文章配图】" />
-								<div class="gallery-post__caption">【待填写：图片说明】</div>
-							</div>
-							<div class="caption-post">
-							    <h3 class="title title--h3">【待填写：文章小标题】</h3>
-								<p>【待补充：文章正文段落】</p>
-								<blockquote class="block-quote">
-								    <p>【待补充：文章引用】</p>
-								    <span class="block-quote__author">【待填写：引用来源】</span>
-								</blockquote>
-								<p>【待补充：文章导语】</p>
-								<p>【待补充：文章正文段落】</p>
-							</div>
-							<footer class="footer-post">
-							    <a class="footer-post__share" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-facebook"></i><span>脸书</span></a>
-								<a class="footer-post__share" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-twitter"></i><span>推特</span></a>
-								<a class="footer-post__share" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-linkedin"></i><span>领英</span></a>
-							</footer>
-						</div>
-						
-						<div class="box-inner box-inner--rounded">
-						    <h2 class="title title--h3">评论占位 <span class="color--light">(3)</span></h2>
-							
-							<!-- Comment -->
-			                <div class="comment-box">
-							    <div class="comment-box__inner">
-                                    <svg class="avatar avatar--60" viewBox="0 0 84 84">
-                                        <g class="avatar__hexagon">
-                                            <image xlink:href="assets/img/avatar-2.jpg" height="100%" width="100%" />
-                                        </g>
-                                    </svg>
-                                    <div class="comment-box__body">
-                                        <h5 class="comment-box__details"><span>【待填写：评论者一】</span><span class="comment-box__details-date">【待填写：评论时间】</span></h5>
-                                        <p>【待补充：评论内容】</p>
+  <article data-cms-post aria-live="polite"><p class="cms-empty">正在读取文章…</p></article>
+</div>
 
-										<ul class="comment-box__footer">
-										    <li><i class="font-icon icon-like-fill"></i> <span>0</span></li>
-										    <li><i class="font-icon icon-reply"></i> <span>回复</span></li>
-										</ul>
-                                    </div>
-								</div>
-								
-								<!-- Comment -->
-					            <div class="comment-box">
-								    <div class="comment-box__inner">
-                                        <svg class="avatar avatar--60" viewBox="0 0 84 84">
-                                            <g class="avatar__hexagon">
-                                                <image xlink:href="assets/img/avatar-3.jpg" height="100%" width="100%" />
-                                            </g>
-                                        </svg>
-                                        <div class="comment-box__body">
-                                            <h5 class="comment-box__details"><span>【待填写：客户姓名二】</span><span class="comment-box__details-date">【待填写：评论时间】</span></h5>
-                                            <p>【待补充：评论内容】 <img class="emoji" src="assets/icons/emoji/emoji-nerd.svg" alt="书呆子表情"/></p>
-											
-											<ul class="comment-box__footer">
-										        <li><i class="font-icon icon-like-fill"></i> <span>0</span></li>
-										        <li><i class="font-icon icon-reply"></i> <span>回复</span></li>
-										    </ul>
-                                        </div>
-									</div>
-                                </div>
-					        </div>
-							
-			                <!-- Comment -->
-			                <div class="comment-box">
-							    <div class="comment-box__inner">
-                                    <svg class="avatar avatar--60" viewBox="0 0 84 84">
-                                        <g class="avatar__hexagon">
-                                            <image xlink:href="assets/img/avatar-6.jpg" height="100%" width="100%" />
-                                        </g>
-                                    </svg>
-                                    <div class="comment-box__body">
-                                        <h5 class="comment-box__details"><span>【待填写：评论者三】</span><span class="comment-box__details-date">【待填写：评论时间】</span></h5>
-                                        <p>【待补充：评论内容】</p>
-										
-										<ul class="comment-box__footer">
-										    <li><i class="font-icon icon-like-fill"></i> <span>0</span></li>
-										    <li><i class="font-icon icon-reply"></i> <span>回复</span></li>
-										</ul>
-                                    </div>
-								</div>
-                            </div>
-							
-							<!-- Comment form -->
-							<ul class="social-auth">
-							    <li class="social-auth__item">第三方登录（未启用）：</li>
-							    <li class="social-auth__item"><a class="social-auth__link" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-facebook"></i></a></li>
-								<li class="social-auth__item"><a class="social-auth__link" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-twitter"></i></a></li>
-								<li class="social-auth__item"><a class="social-auth__link" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-dribbble"></i></a></li>
-								<li class="social-auth__item"><a class="social-auth__link" href="#" aria-disabled="true" onclick="return false;"><i class="font-icon icon-behance"></i></a></li>
-							</ul>
-							<form class="comment-form">
-							    <textarea id="commentForm" class="textarea form-control" required="required" placeholder="评论功能暂未启用" rows="1" disabled="disabled"></textarea>
-								<button type="submit" class="btn" disabled="disabled"><i class="font-icon icon-send"></i></button>
-								<div class="dropdown dropup">
-								    <i class="font-icon icon-smile" id="dropdownEmoji" data-toggle="dropdown" aria-haspopup="true"></i>
-								    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownEmoji">
-									    <div class="emoji-wrap">
-                                            <img class="emoji" src="assets/icons/emoji/emoji-laughing.svg" title="大笑表情" alt="大笑表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-happy-2.svg" title="开心表情二" alt="开心表情二"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-crazy.svg" title="疯狂表情" alt="疯狂表情"/>
-											<img class="emoji" src="assets/icons/emoji/emoji-bad.svg" title="不满表情" alt="不满表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-angry.svg" title="生气表情" alt="生气表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-happy.svg" title="开心表情" alt="开心表情"/>
-                                            <img class="emoji" src="assets/icons/emoji/emoji-thinking.svg" title="思考表情" alt="思考表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-sad.svg" title="难过表情" alt="难过表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-pressure.svg" title="压力表情" alt="压力表情"/>
-											<img class="emoji" src="assets/icons/emoji/emoji-in-love.svg" title="喜爱表情" alt="喜爱表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-nerd.svg" title="大笑表情" alt="书呆子表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-happy-3.svg" title="开心表情三" alt="开心表情三"/>
-                                            <img class="emoji" src="assets/icons/emoji/emoji-shocked.svg" title="震惊表情" alt="震惊表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-wink.svg" title="眨眼表情" alt="眨眼表情"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-sweating.svg" title="流汗表情" alt="流汗表情"/>
-											<img class="emoji" src="assets/icons/emoji/emoji-shocked-2.svg" title="震惊表情二" alt="震惊表情二"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-shocked-3.svg" title="震惊表情三" alt="震惊表情三"/>
-										    <img class="emoji" src="assets/icons/emoji/emoji-sad-2.svg" title="难过表情二" alt="难过表情二"/>
-										</div>	
-                                    </div>
-                                </div>	
-							</form>
-							
-					    </div>
-					</div>
-					
-					<!-- Footer -->
+        <!-- Footer -->
 					<footer class="footer">© Eric Hart | 侯尧</footer>
 		        </div>
 				
@@ -275,6 +138,7 @@
 	<script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/site-content.js"></script>
+    <script src="assets/js/site-collections.js"></script>
     
 	<script src="assets/demo/plugins-demo.js"></script>
 </body>
