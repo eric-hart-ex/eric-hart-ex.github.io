@@ -155,10 +155,13 @@ content:
       - name: published
         label: 公开发布（关闭则不在网站显示）
         type: boolean
+        default: false
       - name: date
         label: 发布日期
         type: date
         required: true
+        options:
+          format: yyyy-MM-dd
       - name: category
         label: 文章分类
         type: select
@@ -243,6 +246,7 @@ content:
       - name: published
         label: 公开展示
         type: boolean
+        default: false
       - name: category
         label: 作品分类
         type: select
