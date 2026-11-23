@@ -168,8 +168,26 @@ content:
         options:
           values: [Google SEO, AI与自动化, B2B数字营销, 网站运营, 设计与视频, 工作思考, 其他]
       - name: cover
-        label: 文章封面
+        label: 封面静态图片（图片模式或视频预览图）
         type: image
+      - name: coverType
+        label: 封面展示方式
+        type: select
+        default: image
+        options:
+          values:
+            - name: image
+              label: 图片封面
+            - name: video
+              label: 短视频封面（建议5–10秒）
+      - name: coverVideo
+        label: 封面短视频（MP4/WebM，建议5–10秒、无声）
+        type: file
+        options:
+          categories: [video]
+          extensions: [mp4, webm]
+          path: assets/video
+          rename: safe
       - name: excerpt
         label: 摘要（列表展示）
         type: text
@@ -253,8 +271,26 @@ content:
         options:
           values: [SEO与网站运营, AI与自动化, 平面设计, 视频制作, 社媒运营, 跨境营销, 其他]
       - name: cover
-        label: 作品封面
+        label: 作品封面静态图片（图片模式或视频预览图）
         type: image
+      - name: coverType
+        label: 封面展示方式
+        type: select
+        default: image
+        options:
+          values:
+            - name: image
+              label: 图片封面
+            - name: video
+              label: 短视频封面（建议5–10秒）
+      - name: coverVideo
+        label: 封面短视频（MP4/WebM，建议5–10秒、无声）
+        type: file
+        options:
+          categories: [video]
+          extensions: [mp4, webm]
+          path: assets/video
+          rename: safe
       - name: description
         label: 项目背景 / 负责内容
         type: text
