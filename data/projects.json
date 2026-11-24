@@ -1,11 +1,12 @@
 [
   {
-    "slug": "test01",
-    "title": "测试作品标题",
+    "slug": "chatgpt-subscription-troubleshooting",
+    "title": "ChatGPT官方订阅与使用环境问题排查实践",
     "published": true,
     "category": "AI与自动化",
-    "cover": "assets/img/豆包 (1).png",
-    "description": "测试AI辅助工作内容制作",
-    "body": "<p></p>"
+    "cover": "/assets/img/subscription.jpg",
+    "coverType": "image",
+    "description": "围绕个人使用ChatGPT过程中遇到的Apple ID地区、Visa支付、订阅渠道、网络环境与账号安全等问题，完成九类问题归纳、排查流程整理及图文知识内容创作。",
+    "body": "<p>个人技术实践 / 问题排查 / 知识内容创作</p>"
   }
 ]
