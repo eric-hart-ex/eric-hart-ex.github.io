@@ -57,6 +57,7 @@
     "published": true,
     "date": "2026-11-07",
     "category": "AI与自动化",
+    "cover": "/assets/img/ps.png",
     "coverType": "image",
     "coverVideo": "/assets/video/ps.mp4",
     "excerpt": "结合B2B制造业平面设计工作场景，探讨如何利用Codex辅助编写Photoshop自动化脚本，实现PSD图层命名、显隐控制、位置调整及图片批量导出，减少重复性设计操作。",
