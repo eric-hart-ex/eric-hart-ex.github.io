@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "slug": "chatgpt-official-subscription-guide",
+    "title": "普通人如何安全、稳定地使用官方ChatGPT？我的账号、支付与使用环境实践记录",
+    "published": false,
+    "date": "2026-11-24",
+    "category": "AI与自动化",
+    "cover": "/assets/img/CHATGPT.jpg",
+    "coverType": "image",
+    "excerpt": "结合个人使用经历，系统梳理ChatGPT官方订阅、Apple ID、Visa支付、网络环境、账号安全和AI工作效率等问题，分享普通用户的排查思路与实践经验。",
+    "body": "<p></p>",
+    "seoTitle": "ChatGPT官方订阅与使用指南：账号、支付及常见问题排查",
+    "seoDescription": "从Apple ID地区、银行卡支付失败到网络稳定性与账号安全，分享官方ChatGPT订阅和长期使用的实际排查思路。"
+  }
+]
