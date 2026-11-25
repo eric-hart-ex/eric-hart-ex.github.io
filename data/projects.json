@@ -27,5 +27,15 @@
     "coverType": "image",
     "description": "围绕餐车多车型、多配置的报价业务，参与宜搭低代码系统的配置与应用，整合车型信息、车身材质、厨房设备、客户地址及价格清单，探索从产品配置到PI形式发票生成的数字化流程。",
     "body": "<ul><li><p>按车型、材质及功能系统整理产品配置模块。</p></li><li><p>建立车型信息、车身材料、制动、照明、电气、燃气、水路及厨房设备等分类。</p></li><li><p>通过数据表单管理客户地址、车型图片、产品配置和车辆价格。</p></li><li><p>将产品配置记录与报价清单关联，探索标准化PI输出流程。</p></li><li><p>利用后台列表集中管理、查询和核对历史产品配置记录。</p></li></ul><p></p>"
+  },
+  {
+    "slug": "eric-hart-github-pages-cms",
+    "title": "个人网站建设｜GitHub Pages与AI辅助CMS开发",
+    "published": true,
+    "category": "SEO与网站运营",
+    "coverType": "image",
+    "description": "基于静态模板，通过ChatGPT与Codex辅助完成个人职业网站中文化、页面调整、SEO基础配置及Pages CMS内容管理扩展，并开发富文本辅助编辑器和图片、短视频封面功能。",
+    "body": "<ul><li><p>规划网站结构，包括个人资料、职业履历、项目作品及技术博客。</p></li><li><p>借助AI辅助理解和修改HTML、CSS及JavaScript代码。</p></li><li><p>完成网站中文化、内容调整及重复页面规范化处理。</p></li><li><p>引入Pages CMS，将个人资料、博客和项目数据逐步结构化。</p></li><li><p>配置JSON内容文件与前端动态读取逻辑。</p></li><li><p>增加传统工具栏式文章辅助编辑页面。</p></li><li><p>为技术博客和项目作品增加图片、短视频封面展示功能。</p></li><li><p>使用GitHub管理代码版本和网站部署。</p></li></ul><p></p>",
+    "link": "https://eric-hart-ex.github.io/"
   }
 ]
