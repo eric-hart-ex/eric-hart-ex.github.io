@@ -37,5 +37,14 @@
     "description": "基于静态模板，通过ChatGPT与Codex辅助完成个人职业网站中文化、页面调整、SEO基础配置及Pages CMS内容管理扩展，并开发富文本辅助编辑器和图片、短视频封面功能。",
     "body": "<ul><li><p>规划网站结构，包括个人资料、职业履历、项目作品及技术博客。</p></li><li><p>借助AI辅助理解和修改HTML、CSS及JavaScript代码。</p></li><li><p>完成网站中文化、内容调整及重复页面规范化处理。</p></li><li><p>引入Pages CMS，将个人资料、博客和项目数据逐步结构化。</p></li><li><p>配置JSON内容文件与前端动态读取逻辑。</p></li><li><p>增加传统工具栏式文章辅助编辑页面。</p></li><li><p>为技术博客和项目作品增加图片、短视频封面展示功能。</p></li><li><p>使用GitHub管理代码版本和网站部署。</p></li></ul><p></p>",
     "link": "https://eric-hart-ex.github.io/"
+  },
+  {
+    "slug": "tiktok-influencer-marketing-operations",
+    "title": "TikTok海外达人合作与营销内容运营实践",
+    "published": true,
+    "category": "社媒运营",
+    "coverType": "image",
+    "description": "参与TikTok海外达人营销与内容运营，围绕达人筛选、商务沟通、合作跟进、样品寄送及视频素材回收开展工作，并结合营销数据观察内容表现和合作效果。",
+    "body": "<ul><li><p>根据产品定位和受众特点筛选海外TikTok达人。</p></li><li><p>进行达人联系、合作沟通与跟进。</p></li><li><p>协调样品寄送及内容制作安</p></li><li><p>整理达人合作记录，关注视频表现及相关营销指标。</p></li></ul><p></p>"
   }
 ]
