@@ -8,5 +8,15 @@
     "coverType": "image",
     "description": "围绕个人使用ChatGPT过程中遇到的Apple ID地区、Visa支付、订阅渠道、网络环境与账号安全等问题，完成九类问题归纳、排查流程整理及图文知识内容创作。",
     "body": "<p>个人技术实践 / 问题排查 / 知识内容创作</p>"
+  },
+  {
+    "slug": "tyzon-shopify-store-development",
+    "title": "TYZON Food Trailer｜Shopify独立站搭建与产品内容优化",
+    "published": true,
+    "category": "跨境营销",
+    "coverType": "image",
+    "description": "负责TYZON Food Trailer餐车品牌Shopify独立站建设，包括主题模板选型与重构、页面视觉设计、产品图片制作、商品信息维护及基础SEO优化，推动产品展示向品牌化、结构化的跨境独立站转变。",
+    "body": "<ul><li><p>参与Shopify主题模板采购、选型与页面重新搭建。</p></li><li><p>根据品牌视觉需求调整首页、导航及产品展示模块。</p></li><li><p>使用Photoshop处理餐车产品图片，统一视觉尺寸与展示风格。</p></li><li><p>维护商品信息，包括产品上架、车型分类、图片及英文产品描述。</p></li><li><p>参与产品页面SEO基础优化，包括标题、描述和页面内容结构。</p></li></ul><p></p>",
+    "link": "https://tyzonfoodtrailer.com/"
   }
 ]
