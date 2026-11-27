@@ -34,6 +34,7 @@
     "title": "个人网站建设｜GitHub Pages与AI辅助CMS开发",
     "published": true,
     "category": "SEO与网站运营",
+    "cover": "/assets/img/eric-hart-1.jpg",
     "coverType": "image",
     "description": "基于静态模板，通过ChatGPT与Codex辅助完成个人职业网站中文化、页面调整、SEO基础配置及Pages CMS内容管理扩展，并开发富文本辅助编辑器和图片、短视频封面功能。",
     "body": "<ul><li><p>规划网站结构，包括个人资料、职业履历、项目作品及技术博客。</p></li><li><p>借助AI辅助理解和修改HTML、CSS及JavaScript代码。</p></li><li><p>完成网站中文化、内容调整及重复页面规范化处理。</p></li><li><p>引入Pages CMS，将个人资料、博客和项目数据逐步结构化。</p></li><li><p>配置JSON内容文件与前端动态读取逻辑。</p></li><li><p>增加传统工具栏式文章辅助编辑页面。</p></li><li><p>为技术博客和项目作品增加图片、短视频封面展示功能。</p></li><li><p>使用GitHub管理代码版本和网站部署。</p></li></ul><p></p>",
